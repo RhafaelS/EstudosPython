@@ -1,26 +1,23 @@
-itens = ['pedra', 'papel', 'tesoura', 'galho', 'faca', 'marreta']
-
-
 def add_lista(anything):
     lista = []
 
-    for item in anything:
-        print(anything)
+    while anything:
+        print("Lista antiga: {}".format(anything))
         dados = anything.pop()
         lista.append(dados)
-        print(lista)
+        print("Lista nova: {}".format(lista))
 
-add_lista(itens)
+    return lista
 
+itens = []
 
-""""
-while itens:
-    param = input("Digite um item ou digite 'no' para finalizar: ")
+while len(itens) != 10 :
+    param = input("Digite até 10 itens ou digite 'no' para finalizar: ")
     if param != 'no':
         itens.append(param)
     else:
         print("Fechou os itens!")
         break
 
-"""
+add_lista(itens)
 
